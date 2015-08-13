@@ -1,4 +1,4 @@
-package secretballcom.example.zion.istory;
+package secretballcom.example.zion.istory.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import secretballcom.example.zion.istory.R;
+
 public class MainActivity extends AppCompatActivity {
-    private EditText mName;
+    private EditText mNameField;
     private Button mStartButton;
 
     @Override
@@ -17,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mName = (EditText)findViewById(R.id.nameText);
+        mNameField = (EditText)findViewById(R.id.nameText);
         mStartButton=(Button)findViewById(R.id.button);
         mStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = mName.getText().toString();
-                Toast.makeText(MainActivity.this,name,Toast.LENGTH_LONG).show();
+                String name = mNameField.getText().toString();
+                Toast.makeText(MainActivity.this,name, Toast.LENGTH_LONG).show();
                 startStory(name);
 
             }
@@ -32,8 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void startStory(String name){
         Intent intent = new Intent(MainActivity.this,StoryActivity.class);
-        intent.putExtra("name",name);
+        intent.putExtra(getString(R.string.key_name),name);
         startActivity(intent);
+    }
+
+    protected void onResume(){
+        super.onResume();
+        mNameField.setText("");
     }
 
 }

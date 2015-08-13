@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:colorButtonNormal">#ffffff</item>
         <item name="android:editTextColor">#3a8aea</item>
@@ -8,5 +8,4 @@
 
         <!-- Customize your theme here. -->
     </style>
-
 </resources>

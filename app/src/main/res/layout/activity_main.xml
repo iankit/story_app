@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
 
     <ImageView
         android:id="@+id/titleImageView"
@@ -22,7 +23,8 @@
         android:text="Start Your Story"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#3a8aea" />
 
     <EditText
         android:layout_width="match_parent"
@@ -32,7 +34,9 @@
         android:id="@+id/nameText"
         android:layout_above="@+id/button"
         android:layout_centerHorizontal="true"
-        android:hint="Enter Your Name To Begin" />
+        android:hint="Enter Your Name To Begin"
+        android:background="@android:color/white"
+        android:textColor="#3a8aea" />
 
 
 </RelativeLayout>
